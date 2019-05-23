@@ -13,14 +13,16 @@ ReadParse();
 
 print "Content-type: text/html; charset=utf-8\n\n";
 
-if (!%in)
-{
-    open(my $fh, "<index.html");
-    local $/ = undef;
-    my $html = <$fh>;
-    close $fh;
-    print $html;
-} else {
+# if (!%in)
+# {
+#     open(my $fh, "<index.html");
+#     local $/ = undef;
+#     my $html = <$fh>;
+#     close $fh;
+#     print $html;
+# } else {
     print Dumper(\%in);
+    print "<pre>";
     print Dumper(\%ENV);
-}
+    print "</pre>";
+# }
